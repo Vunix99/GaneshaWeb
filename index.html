@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIUR - For your diet</title>
+    <link rel="stylesheet" href="/css/lstyle.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <!-- Using Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="images/logo-mini.png" type="image/x-icon" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Using boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="navbar">
+      <img
+        class="logo"
+        src="images/logo-med.png"
+        alt="Logo Diur"
+        width="70px"
+        height="auto" />
+      <div class="burger-menu">
+        <div class="burger-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#desc-apps">About</a></li>
+          <li><a href="#popular-article">Article</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="login">
+        <li><a class="btn" href="login.html">Login</a></li>
+        <span>|</span>
+        <li><a class="btn" href="#download-app">App</a></li>
+      </ul>
+    </header>
+    <!--nav-end--------------------->
+
+    <!-- Search-banner -->
+    <section
+      id="search-banner"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="500">
+      <!-- bg -->
+      <img src="images/bg-1.png" class="bg-1" alt="bg" />
+      <img src="images/bg-2.png" class="bg-2" alt="bg-2" />
+      <!-- text -->
+      <div class="search-banner-text">
+        <h1>Nurturing your Diet, Transforming your Future</h1>
+        <strong>#DietSayur</strong>
+        <!-- search-box -->
+        <form action="" class="search-box">
+          <!-- icon -->
+          <i class="fas fa-search"></i>
+          <!-- input -->
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search article about diet"
+            name="search"
+            required />
+          <!-- btn -->
+          <input type="submit" class="search-btn" value="Search" />
+        </form>
+      </div>
+    </section>
+    <!-- search-banner-end -------------->
+
+    <!-- Deskripsi singkat aplikasi -->
+    <section id="desc-apps">
+      <!-- Heading -->
+      <div
+        class="desc-heading"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="500">
+        <h2>Our <span style="color: #4eb060">Apps</span></h2>
+      </div>
+      <div
+        class="app-description"
+        data-aos="fade-right"
+        data-aos-easing="linear"
+        data-aos-duration="500">
+        <img src="images/salad_bowl.png" alt="Nama Aplikasi" />
+        <div>
+          <h1>
+            <span style="color: #4eb060">DIUR</span> Selalu ada menemani dietmu!
+          </h1>
+          <p>
+            Aplikasi diet sayuran dengan resep beragam dan chat-bot cerdas yang
+            mendukung pengguna dengan panduan bahan makanan. Dilengkapi dengan
+            fitur cerdas yang memberikan informasi nutrisi dan saran untuk
+            memudahkan pengguna yang ingin menerapkan pola diet sayur dengan
+            lebih bervariasi dan mudah.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- card feature -->
+    <main
+      class="cards"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="500">
+      <section class="card satu">
+        <div class="icon">
+          <i class="fas fa-calculator"></i>
+          <!-- Icon kalkulator untuk Fitur 1 -->
+        </div>
+        <h3> Asisten Diet</h3>
+        <span
+          >Sistem kami dapat membuatmu lebih mengetahui seberapa banyak kalori
+          yang harus kamu terima setiap harinya, dan akan mengkalkulasi setiap
+          resep yang kamu selesaikan</span
+        >
+        <a href="utama.html" class="read-more"
+          ><i class="fas fa-arrow-right"></i> Try It</a
+        >
+      </section>
+
+      <section class="card tiga">
+        <div class="icon">
+          <i class="fas fa-info"></i>
+          <!-- Icon informasi untuk Fitur 3 -->
+        </div>
+        <h3>Informasi Menarik</h3>
+        <span
+          >Kami menyediakan resep dari sayuran dan informasi berupa
+          tips/trik/artikel terkait yang akan membuatmu tertarik dan
+          bersemangat</span
+        ><a href="utama.html" class="read-more"
+          ><i class="fas fa-arrow-right"></i> Try It</a
+        >
+      </section>
+    </main>
+
+    <!-- Article -->
+    <section id="popular-article">
+      <!-- heading -->
+      <div
+        class="article-heading"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="500">
+        <h2>Popular Article</h2>
+        <span>All</span>
+      </div>
+      <!-- box-container -->
+      <div
+        class="article-container"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="500">
+        <!-- box -->
+        <div class="article-card">
+          <img src="images/artikel-1.webp" alt="Card Image" />
+          <div class="card-content">
+            <h5 class="card-title">
+              Ini Berbagai Sayuran untuk Diet yang Sehat dan Mudah Diolah
+            </h5>
+            <p class="card-text">
+              Makanan untuk diet umumnya, enggak jauh-jauh dari sayuran.
+              Pasalnya, bahan makanan ini cenderung rendah kalori sehingga tidak
+              akan bikin timbangan kamu semakin melambung. Bukan itu saja .....
+            </p>
+            <a href="#" class="read-more"
+              ><i class="fas fa-arrow-right"></i> Read More</a
+            >
+          </div>
+        </div>
+
+        <div class="article-card">
+          <img src="images/artikel-2.jpeg" alt="Card Image" />
+          <div class="card-content">
+            <h5 class="card-title">3 Cara Memasak Sayuran untuk Diet Sehat</h5>
+            <p class="card-text">
+              Mengolah sayuran untuk menu diet memang tidak bisa sembarangan.
+              Sayur harus diolah sedemikian rupa agar kandungan nutrisi tetap
+              terjaga.Selain itu, kebaikan nutrisi sayuran harus dipertahankan
+              dengan baik, karena .....
+            </p>
+            <a href="#" class="read-more"
+              ><i class="fas fa-arrow-right"></i> Read More</a
+            >
+          </div>
+        </div>
+
+        <div class="article-card">
+          <img src="images/artikel-3.jpg" alt="Card Image" />
+          <div class="card-content">
+            <h5 class="card-title">
+              Mengenal Vegan, Seperti Apa Pola Makan dan Manfaatnya?
+            </h5>
+            <p class="card-text">
+              Apa itu vegan? Vegan adalah orang yang tidak mengonsumsi daging
+              hewan dan segala jenis makanan olahan yang berasal dari hewan.
+              Pola makan bebas dari daging, produk olahan susu, dan telur,
+              disebut juga sebagai diet vegan .....
+            </p>
+            <a href="#" class="read-more"
+              ><i class="fas fa-arrow-right"></i> Read More</a
+            >
+          </div>
+        </div>
+
+        <div class="article-card">
+          <img src="images/artikel-4.jpg" alt="Card Image" />
+          <div class="card-content">
+            <h5 class="card-title">Ini Kelebihan dan Kekurangan Diet Vegan</h5>
+            <p class="card-text">
+              Diet vegetarian (vegan) akhir-akhir ini semakin populer dilakukan
+              dikalangan masyarakat. Alih-alih menurunkan berat badan, justru
+              tak sedikit juga yang melakukan diet vegan atas dasar kepedulian
+              pada hewan dan lingkungan. Menurut dr. Yusra Firdaus via
+              Hellosehat .....
+            </p>
+            <a href="#" class="read-more"
+              ><i class="fas fa-arrow-right"></i> Read More</a
+            >
+          </div>
+        </div>
+
+        <div class="article-card">
+          <img src="images/artikel-5.jpg" alt="Card Image" />
+          <div class="card-content">
+            <h5 class="card-title">
+              7 Sumber Makanan dan Minuman Probiotik untuk Vegan
+            </h5>
+            <p class="card-text">
+              Probiotik merupakan bakteri atau mikroorganisme yang dikenal
+              memberi manfaat bagi kesehatan. Kandungan probiotik dapat
+              ditemukan dalam makanan, minuman, dan suplemen. Terlebih bagi
+              orang menjalani diet vegan, maka probiotik ini .....
+            </p>
+            <a href="#" class="read-more"
+              ><i class="fas fa-arrow-right"></i> Read More</a
+            >
+          </div>
+        </div>
+
+        <div class="article-card">
+          <img src="images/artikel-6.jpg" alt="Card Image" />
+          <div class="card-content">
+            <h5 class="card-title">
+              5 Cara Meningkatkan Kadar Kolesterol Baik dalam Tubuh
+            </h5>
+            <p class="card-text">
+              Memiliki kadar HDL yang tinggi membantu membawa kolesterol dari
+              arteri ke hati, tempat tubuh dapat menggunakan atau
+              mengeluarkannya. Memiliki tingkat HDL yang tinggi juga memiliki
+              efek antioksidan dan .....
+            </p>
+            <a href="#" class="read-more"
+              ><i class="fas fa-arrow-right"></i> Read More</a
+            >
+          </div>
+        </div>
+        <!-- Tambahkan lebih banyak kartu di sini -->
+      </div>
+    </section>
+    <!-- Article section end -->
+
+    <!-- download-app -->
+    <section id="download-app">
+      <!-- img -->
+      <div
+        class="app-img"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="500">
+        <img src="images/Phone_2.png" alt="app" />
+      </div>
+      <!-- text -->
+      <div
+        class="download-app-text"
+        data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="500">
+        <strong>Download App</strong>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id officiis,
+          ratione, non doloribus similique nam aliquam doloremque, ipsa neque
+          voluptas at recusandae est cumque ipsum. Vel sint libero odit placeat?
+        </p>
+        <!-- btns -->
+        <div class="download-btns">
+          <a href="#"
+            ><img src="images/download.png" alt="Download on Drive"
+          /></a>
+        </div>
+      </div>
+    </section>
+    <!-- download-app-section-end -->
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="content_footer">
+          <div class="profil">
+            <div class="logo_area">
+              <img src="images/logo-med.png" alt="" class="logo_diur" />
+              <button id="dark-mode" class="mode-button">
+                <i class="bx bx-moon"></i>
+              </button>
+              <button id="light-mode" class="mode-button hide">
+                <i class="bx bx-sun"></i>
+              </button>
+            </div>
+            <div class="desc_area">
+              <p>
+                Aplikasi yang ditargetkan untuk kamu yang ingin diet sayuran
+                dengan memperhatikan asupan kalori harian, dan untuk menambah
+                informasi terkait sayuran ataupun diet
+              </p>
+            </div>
+            <div class="social_media">
+              <a href="#"><i class="fa-brands fa-facebook fa-bounce"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube fa-bounce"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram fa-bounce"></i></a>
+            </div>
+          </div>
+          <div class="service_area">
+            <ul class="service_header">
+              <li class="service_name">Resep</li>
+              <li><a href="#">Vegetarian</a></li>
+              <li><a href="#">Vegan</a></li>
+            </ul>
+            <ul class="service_header">
+              <li class="service_name">Artikel</li>
+              <li><a href="#">Terbaru</a></li>
+              <li><a href="#">Tips & Trik</a></li>
+              <li><a href="#">Informasi Pangan</a></li>
+              <li><a href="#">Fakta Unik</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="footer_bottom">
+          <div class="copy_right">
+            <i class="bx bxs-copyright"></i>
+            <span>2023 GANESHA</span>
+          </div>
+          <div class="tou">
+            <a href="#">Term of Use</a>
+            <a href="#">Privacy Police</a>
+            <a href="#">Cookie</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
