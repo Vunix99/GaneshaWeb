@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DIUR"
+        tools:targetApi="33">
+        <activity
+            android:name=".Riwayat"
+            android:exported="false" />
+        <activity
+            android:name=".GantiPassword"
+            android:exported="false" />
+        <activity
+            android:name=".GetSecurityKey"
+            android:exported="false" />
+        <activity
+            android:name=".LupaPassword"
+            android:exported="false" />
+        <activity
+            android:name=".AlertAfterRegister"
+            android:exported="false" />
+        <activity
+            android:name=".detail_artikel"
+            android:exported="false" />
+        <activity
+            android:name=".artikel"
+            android:exported="false" />
+        <activity
+            android:name=".kalku_bb"
+            android:exported="false" />
+        <activity
+            android:name=".kalku_kalori"
+            android:exported="false" />
+        <activity
+            android:name=".detail_resep"
+            android:exported="false" />
+        <activity
+            android:name=".resep"
+            android:exported="false" />
+        <activity
+            android:name=".user_profile"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name=".register_finishing"
+            android:exported="false"
+            android:noHistory="true" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

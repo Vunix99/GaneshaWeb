@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kalku_bb"
+    android:background="@drawable/background_image">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/buttonBackToHome"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/button_back"></ImageButton>
+
+        <TextView
+            android:id="@+id/textViewKalku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="Kalkulator"
+            android:textColor="@color/black"
+            android:textSize="24dp"></TextView>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/buttonChangeKalku"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/kalku_bb_active"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></ImageButton>
+
+    <LinearLayout
+        android:layout_width="347dp"
+        android:layout_height="324dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChangeKalku"
+        android:background="@drawable/card_resep_shape"
+        android:backgroundTint="@color/aqua_900"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_beratbadan_ideal"
+            android:layout_width="268dp"
+            android:layout_height="44dp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center_vertical"
+            android:text="Kalulator Berat Badan Ideal"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/red_700"
+            android:backgroundTint="@color/yellow_200"
+            android:textSize="16dp"
+            tools:ignore="RtlCompat"></TextView>
+
+        <EditText
+            android:id="@+id/et_tinggibadan_register"
+            android:layout_width="317dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_medium"
+            android:hint="Tinggi badan (cm)"
+            android:inputType="textNoSuggestions"
+            android:imeOptions="actionNext"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_beratbadan_register"></EditText>
+
+        <Spinner
+            style="@style/Widget.AppCompat.Spinner"
+            android:id="@+id/spinner_kelamin"
+            android:textAlignment="center"
+            android:layout_width="317dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_tinggibadan_register" />
+
+
+        <Button
+            android:id="@+id/buttonHitung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hitung"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/green_300"
+            android:textColor="@color/green_900"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"></Button>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:background="@color/pop_up_color"
+        >
+
+        <LinearLayout
+            android:layout_width="318dp"
+            android:layout_height="236dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="@drawable/border_radius_med"
+            android:backgroundTint="@color/pop_up_color"
+            android:clipToOutline="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_popup"
+                android:fontFamily="@font/inter_bold"
+                android:textSize="23sp"
+                android:layout_marginTop="20dp"
+                android:text="Konfirmasi"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="19sp"
+                android:layout_marginTop="30dp"
+                android:text="Apakah anda yakin ingin menyelesaikan resep ini? "
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/linear_tombol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0.564">
+
+                <Button
+                    android:id="@+id/button_batal_resep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_radius_med"
+                    android:backgroundTint="@color/red_700"
+                    android:text="Batal"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/button_done_resep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:background="@drawable/border_radius_med"
+                    android:backgroundTint="@color/green_900"
+                    android:text="Selesaikan"
+                    android:textAllCaps="false"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

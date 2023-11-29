@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_profile"
+    android:background="@drawable/background_image_3">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Profile"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonBackToHome"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/button_back"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollviewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="0dp"
+        app:layout_constraintBottom_toTopOf="@id/linear_save_logout"
+        app:layout_constraintTop_toBottomOf="@id/textView12"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="169dp"
+                android:layout_height="169dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/profile_button" />
+
+            <TextView
+                android:id="@+id/profile_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Your Name"
+                android:textAlignment="center"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Usia"
+                android:textAlignment="center"
+                android:textColor="@color/black_700"
+                android:textSize="13dp"
+                android:layout_marginStart="25dp"/>
+
+            <EditText
+                android:id="@+id/profile_usia"
+                android:layout_width="318dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/umur_icon"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:hint="Usia"
+                android:paddingStart="20dp"
+                android:paddingEnd="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/grey_400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            <LinearLayout
+                android:id="@+id/linear_title_tb_bb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_usia">
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="60dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Tinggi Badan"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_700"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.207"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_usia"></TextView>
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="45dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Berat Badan"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_700"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.42"
+                    app:layout_constraintStart_toEndOf="@+id/textView21"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_usia"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_et_tb_bb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+               >
+
+                <EditText
+                    android:id="@+id/profile_tinggibadan"
+                    android:layout_width="155dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_shape"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/tinggi_icon"
+                    android:fontFamily="@font/inter_medium"
+                    android:hint="Tinggi Badan"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="30dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_400"
+                 />
+
+                <EditText
+                    android:id="@+id/profile_beratbadan"
+                    android:layout_width="155dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/button_shape"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/berat_icon"
+                    android:fontFamily="@font/inter_medium"
+                    android:hint="Berat Badan"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="30dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_400"
+             />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/profile_aktivitas"
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="317dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/dropdown"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/linear_et_tb_bb" />
+
+            <LinearLayout
+                android:id="@+id/linear_button_important"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/profile_aktivitas">
+
+                <Button
+                    android:id="@+id/buttonToGantiPassword"
+                    android:layout_width="318dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border_radius_med"
+                    android:backgroundTint="@color/red_100"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Ganti Password"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red_700"
+                    android:textSize="16sp"></Button>
+
+                <Button
+                    android:id="@+id/buttonToGetSecurityKey"
+                    android:layout_width="318dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/border_radius_med"
+                    android:backgroundTint="@color/yellow_100"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Lihat Security Key"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red_700"
+                    android:textSize="16sp"></Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_save_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.564">
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_radius_med"
+            android:backgroundTint="@color/red_500"
+            android:text="Log out"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.214"
+            app:layout_constraintStart_toEndOf="@+id/update_profile_button"
+            app:layout_constraintTop_toBottomOf="@+id/profile_aktivitas" />
+
+        <Button
+            android:id="@+id/update_profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:background="@drawable/border_radius_med"
+            android:backgroundTint="@color/green_900"
+            android:text="Simpan"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_aktivitas" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
