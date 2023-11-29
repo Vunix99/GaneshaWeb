@@ -1,0 +1,1106 @@
+:root {
+    --bg-ijotua: #415230;
+    --bg-ijo: #4eb060;
+    --bg-ijomuda: #5ccf71;
+    --bg-jambu: #f9f1e4;
+    --bg-hitam: #202020;
+    --bg-abu: #3b3b3b;
+    --primary-color: #fff;
+    --secondary-color: #202020;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  li,
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+  }
+  
+  header {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  header .nav {
+    background-color: transparent; /* Ganti dengan warna latar belakang yang Anda inginkan */
+    padding: 0; /* Hapus padding pada nav jika diperlukan */
+  }
+  
+  /* Aturan awal untuk navbar dengan latar belakang transparan */
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  #navbar.bg-white {
+    background-color: white;
+  }
+  
+  .image {
+    flex: 1;
+    width: 100%;
+    padding: 0 80px;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .nav li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  
+  .nav li a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav li a:hover {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav li a:hover {
+    color: var(--bg-ijo);
+  }
+  
+  /*Navbar Burger*/
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* Tambahkan warna ikon hamburger jika diperlukan */
+  .burger-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    color: var(--bg-ijo); /* Tambahkan warna sesuai kebutuhan */
+  }
+  
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--bg-ijo);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+  
+    .burger-icon {
+      display: flex;
+      align-items: center;
+      margin-left: 70px;
+    }
+  
+    .burger-menu.active {
+      transition: background-color 0.3s cubic-bezier(0.5, 0, 0.5, 1); /* Tambahkan fungsi waktu transisi cubic-bezier */
+    }
+    .nav {
+      display: none;
+      top: 60px;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+  
+    .nav.active {
+      display: flex;
+      width: 100%; /* Lebar navbar sesuai dengan lebar layar */
+      background-color: white;
+      position: fixed;
+      top: 60px;
+      right: 0px;
+      padding: 20px 0; /* Padding atas dan bawah */
+      z-index: 1;
+      border-radius: 0; /* Menghilangkan border-radius */
+      box-shadow: none; /* Menghilangkan box-shadow */
+      transition: all 0.3s ease;
+    }
+  
+    .burger-menu.active .bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+  
+    .burger-menu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .burger-menu.active .bar:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  
+    .nav li {
+      display: block; /* Mengubah list item menjadi block agar terurut ke bawah */
+      padding: 15px 20px; /* Padding item */
+      text-align: center;
+    }
+  
+    .nav li a {
+      color: var(--bg-ijo);
+    }
+  
+    .nav li a:hover {
+      color: var(--bg-abu);
+    }
+  }
+  
+  /*==user-profile========================*/
+  .profile-pengguna .action {
+    display: block;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .profile-pengguna .action img {
+    width: 70%;
+    height: auto;
+    margin-top: 4px;
+  }
+  
+  .profile-pengguna .pengguna {
+    width: 310px;
+    padding: 30px;
+    background-color: #222533;
+    border-radius: 10px;
+    position: absolute;
+    top: 70px;
+    right: 138px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  
+  .profile-pengguna .pengguna.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .profile-pengguna .pengguna::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #222533;
+    border-top-left-radius: 3px;
+    position: absolute;
+    top: -8px;
+    right: 19px;
+    transform: rotate(45deg);
+  }
+  
+  .profile-pengguna .pengguna .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-pengguna .pengguna .profile img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    user-select: none;
+  }
+  
+  .profile-pengguna .pengguna .profile .info {
+    margin-left: 15px;
+  }
+  
+  .profile-pengguna .pengguna .profile .info h2 {
+    color: #dadada;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+  }
+  
+  .profile-pengguna .pengguna .profile .info p {
+    color: #7d8193;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .profile-pengguna .pengguna .btn-user:hover {
+    background-color: #292c3d;
+  }
+  
+  .profile-pengguna .pengguna ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pengguna .pengguna ul li:last-child {
+    margin: 0;
+  }
+  
+  .profile-pengguna .pengguna ul li a {
+    color: #e5e5e5;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Menambahkan transisi smooth pada warna teks saat hover */
+  }
+  .profile-pengguna .pengguna ul li img {
+    width: 26px;
+    margin-right: 10px;
+    user-select: none;
+  }
+  
+  .profile-pengguna .pengguna ul li a:hover {
+    color: var(--bg-ijomuda); /* Ganti dengan warna teks saat hover */
+  }
+  
+  @media (max-width: 768px) {
+    .profile-pengguna .pengguna {
+      right: 50px; /* Sesuaikan posisi dropdown untuk ukuran layar laptop yang lebih kecil */
+    }
+  }
+  
+  /*==Nav End========================*/
+  /* Responsif pada lebar layar 576px atau kurang */
+  
+  @media (max-width: 320px) {
+    .profile-pengguna .pengguna {
+      right: 58px;
+    }
+  }
+  
+  /* ========== Search =============*/
+  .bg-1 {
+    position: absolute;
+    left: -50px;
+    top: -150px;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+  }
+  .inner-bckg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Tengah secara horizontal */
+    height: 80vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .search-banner-text {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: 11%;
+    position: relative;
+    padding: 0;
+  }
+  .search-banner-text h1 {
+    font-size: 3rem;
+    line-height: 55px;
+    color: var(--bg-hitam);
+  }
+  .search-banner-text strong {
+    color: var(--bg-ijo);
+    font-size: 1.4rem;
+    margin-top: 4px;
+  }
+  .search-box {
+    background-color: #ffffff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0px 5px 0px 20px;
+    border-radius: 30px;
+  }
+  .search-box i {
+    font-size: 1.3rem;
+    color: var(--bg-abu);
+    margin: 0px 10px;
+  }
+  .search-box .search-input {
+    height: 40px;
+    border: none;
+    width: 100%;
+    padding: 0px 10px;
+    outline: none;
+  }
+  .search-box .search-btn {
+    width: 220px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: var(--bg-ijo);
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .search-box .search-btn:hover {
+    background-color: var(--bg-ijomuda);
+    transition: all 0.3s ease 0s;
+  }
+  @media (max-width: 768px) {
+    .search-banner-text{
+      width: auto;
+    }
+    .search-banner-text h1{
+      font-size: 2rem;
+    }
+    .search-box {
+      width: auto; /* Sesuaikan posisi dropdown untuk ukuran layar laptop yang lebih kecil */
+    }
+  }
+  
+  /* CSS */
+  .bckg {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+      0deg,
+      rgb(164, 198, 122) 0%,
+      /* Warna bawah (item muda) */ rgb(255, 255, 255) 100%
+        /* Warna atas (putih) */
+    );
+    color: white;
+  }
+  
+  .inner-bckg {
+    height: 85vh;
+    width: 100%;
+  }
+  
+  .inner-bckg2 {
+    height: 20vh;
+    width: 100%;
+  }
+
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+  }
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+  
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+  
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+  
+  /* /* Shrinking for mobile */
+  @media (max-width: 768px) {
+    .waves {
+      height: 40px;
+      min-height: 100px;
+    }
+    .bckg {
+      /* Tetapkan latar belakang untuk memenuhi layar vertikal */
+      width: 100%;
+    }
+    .bg-1 {
+      left: -30px; /* Sesuaikan dengan perubahan yang Anda inginkan */
+      top: -80px; /* Sesuaikan dengan perubahan yang Anda inginkan */
+      width: 200px; /* Sesuaikan dengan perubahan yang Anda inginkan */
+      height: 200px; /* Sesuaikan dengan perubahan yang Anda inginkan */
+    }
+  }
+
+
+
+  .container-kalku {
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: #aaa;
+    border-radius: 25px;
+  }
+  
+  .active-button {
+    background-color: #45a049;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .inactive-button-2 {
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px 0 0 25px;
+  }
+  
+  .inactive-button {
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+  }
+
+  .active-button-2 {
+    background-color: #45a049;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .inactive-button:hover {
+    background-color: var(--bg-ijomuda);
+    color: white;
+  }
+
+  .inactive-button-2:hover {
+    background-color: var(--bg-ijomuda);
+    color: white;
+  }
+  
+
+  
+  /*==========Kalku============*/
+  .calcu-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 20px 0;
+    
+  }
+
+  .container-kalkulator-kalori {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 20px 0;
+    
+  }
+  
+
+  .container-kalkulator-bb {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 20px 0;
+  
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 30px;
+  }
+  
+  .card {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .card h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-kalkulator {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .button-group {
+    text-align: center;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #45a049;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card-kanan {
+    text-align: center;
+  }
+  
+  .hasil-kalori {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .hasil-kalori p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+
+  
+
+  /* ============= Footer ========== */
+  .show {
+    display: inline;
+  }
+  
+  .hide {
+    display: none;
+  }
+  .logo_diur {
+    width: auto;
+    max-height: 50px;
+  }
+  
+  footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 16px 70px -8px rgb(0, 0, 0, 0.25);
+    transition: background 0.3s linear;
+  }
+  
+  .container {
+    max-width: 1440px;
+    padding: 30px 40px;
+    margin: auto;
+    height: 500;
+  }
+  
+  .content_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .profil .logo_area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .profil .logo_area img {
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .logo_area .logo_name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 1rem;
+    color: var(--secondary-color);
+  }
+  
+  .logo_area button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  .logo_area .sun {
+    color: #fff;
+    font-size: 22px;
+  }
+  
+  .logo_area .moon {
+    color: var(--primary-color);
+    font-size: 22px;
+  }
+  
+  .desc_area {
+    max-width: 320px;
+    margin-bottom: 1.25rem;
+  }
+  
+  .desc_area p {
+    color: #828282;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  
+  .social_media a {
+    color: #828282;
+    margin-right: 22px;
+    font-size: 24px;
+  }
+  
+  .social_media a:hover {
+    color: #313131;
+  }
+  
+  .service_area {
+    display: flex;
+  }
+  
+  .service_header {
+    margin-right: 40px;
+  }
+  
+  li.service_name {
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+  
+  .service_header li a {
+    color: #828282;
+    padding-bottom: 1px;
+    font-weight: 400;
+  }
+  
+  .service_header li a:hover {
+    color: #313131;
+  }
+  
+  .service_header li {
+    margin-bottom: 10px;
+  }
+  
+  hr {
+    height: 1px;
+    border: none;
+    background-color: #828282;
+    margin-bottom: 1rem;
+  }
+  
+  .footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+  }
+  
+  .copy_right {
+    color: #828282;
+    display: flex;
+    align-items: center;
+  }
+  
+  .copy_right span {
+    margin-left: 8px;
+    font-weight: 400;
+    letter-spacing: 0.135rem;
+  }
+  
+  .tou a {
+    color: #828282;
+    margin-left: 1.5rem;
+  }
+  .tou a:hover {
+    color: #313131;
+  }
+  
+  .service_header li {
+    list-style: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .content_footer {
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+    .service_area {
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+    .service_header {
+      margin-left: 0;
+      margin-right: 40px;
+    }
+    .social_media {
+      margin-bottom: 1rem;
+    }
+    .footer_bottom {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  @media screen and(max-width:510px) {
+    .service_header {
+      margin-bottom: 8px;
+    }
+    .copy-right {
+      margin-bottom: 8px;
+    }
+  }
+  /* ========== Footer style end =============*/
+  /*----------------------------------------*/
+  
+  
+  /* Tombol "Read More" pada card */
+  .read-more {
+    width: 100%;
+    height: 40px;
+    color: #4eb060;
+    transition: all ease 0.3s;
+    display: flex;
+    align-items: center; /* Menjadikan tombol Read More di sebelah bawah */
+  }
+  
+  /* Efek hover pada tombol "Read More" */
+  .read-more:hover {
+    color: black;
+    transition: all ease 0.3s;
+  }
+  
+  .read-more i {
+    margin-right: 10px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .article-card {
+      width: calc(
+        50% - 20px
+      ); /* Pada layar lebih kecil, masing-masing kartu akan memenuhi setengah lebar */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .article-card {
+      width: calc(
+        100% - 20px
+      ); /* Pada layar sangat kecil, kartu akan memenuhi seluruh lebar */
+    }
+  }
+  /* Article-All */
+  /* Styling Container */
+  .container-article {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    margin-left: 150px;
+  }
+  
+  /* Styling Main Content */
+  main {
+    flex: 2;
+  }
+  
+  #SearchInput {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #f2f2f2;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  /* Style the search label */
+  .Label {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  /* Style the search button (optional) */
+  .Search-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  /* Styling Sidebar */
+  .sidebar {
+    flex: 1;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 150px auto;
+  }
+  
+  /* Styling Sidebar Content */
+  .sidebar-content {
+    padding: 10px;
+  }
+  
+  /* Styling Sidebar Links */
+  
+  /* Gaya untuk h2 di dalam sidebar */
+  .ser-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1;
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .ser-title:after,
+  .ser-title:after {
+    background-color: #a8a8a8;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 60%;
+  }
+  
+  /* Gaya untuk kotak pencarian */
+  .search-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  
+  /* Gaya untuk input pencarian */
+  .form-control {
+    border: 1px solid #e1e1e1;
+    padding: 13px 45px 15px 13px; /* Perhatikan padding diubah */
+    transition: 0.2s;
+    outline-offset: -2px;
+    flex-grow: 1;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  /* Gaya untuk tombol pencarian */
+  .btn-search {
+    border: none;
+    bottom: -3px;
+    width: 49px;
+    height: 49px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative; /* Tambahkan posisi relatif untuk mengatur ikon */
+  }
+  
+  /* Gaya saat hover pada tombol pencarian */
+  .btn-search:hover {
+    background-color: var(--bg-ijomuda);
+  }
+  
+  .tags li {
+    display: inline-block;
+  }
+  
+  .tags li a {
+    border: 1px solid #e1e1e1;
+    line-height: 1em;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    color: #1b1b1c;
+    border-radius: 25px;
+    font-weight: 500;
+  }
+  
+  .tags li a:hover {
+    color: var(--bg-ijomuda);
+    border-color: var(--bg-ijomuda);
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #333;
+  }
+  /* Styling Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  
+  .pagination a {
+    text-decoration: none;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 8px 12px;
+    margin: 0 4px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .pagination a:hover {
+    background-color: var(--bg-ijomuda);
+    color: white;
+  }
+  
+  .pagination .prev,
+  .pagination .next {
+    font-weight: bold;
+  }
+  
+  /* Styling Pagination for Mobile */
+  @media (max-width: 768px) {
+    .pagination {
+      flex-wrap: wrap;
+    }
+  
+    .pagination a {
+      margin: 4px 4px;
+      white-space: nowrap;
+    }
+    .container-article {
+      margin: 50px;
+    }
+  }
+  
+  /*---------------------------
+      - Mobile Menu Css
+  -----------------------------*/
+  
+  .mobile-menu li > a {
+    font-size: 15px;
+    color: #252525;
+    text-transform: capitalize;
+    line-height: 18px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    font-weight: 600;
+  }
+  
+  .mobile-menu li > a:hover {
+    color: var(--bg-ijomuda);
+  }
+  
+  .mobile-menu li ul li {
+    border: none;
+  }
+  
+  .mobile-menu li ul li a {
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 10px 15px 8px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 767px) {
+    .mobile-menu .has-children .menu-expand,
+    .mobile-menu .menu-item-has-children .menu-expand {
+      left: 90%;
+    }
+  }

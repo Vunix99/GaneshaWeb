@@ -1,0 +1,1051 @@
+:root {
+    --bg-ijotua: #415230;
+    --bg-ijo: #4eb060;
+    --bg-ijomuda: #5ccf71;
+    --bg-jambu: #f9f1e4;
+    --bg-hitam: #202020;
+    --bg-abu: #3b3b3b;
+    --primary-color: #fff;
+    --secondary-color: #202020;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  li,
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+  }
+  
+  header {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  header .nav {
+    background-color: transparent; /* Ganti dengan warna latar belakang yang Anda inginkan */
+    padding: 0; /* Hapus padding pada nav jika diperlukan */
+  }
+  
+  /* Aturan awal untuk navbar dengan latar belakang transparan */
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  #navbar.bg-white {
+    background-color: white;
+  }
+  
+  .image {
+    flex: 1;
+    width: 100%;
+    padding: 0 80px;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .nav li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  
+  .nav li a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav li a:hover {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav li a:hover {
+    color: var(--bg-ijo);
+  }
+  
+  /*Navbar Burger*/
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* Tambahkan warna ikon hamburger jika diperlukan */
+  .burger-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    color: var(--bg-ijo); /* Tambahkan warna sesuai kebutuhan */
+  }
+  
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--bg-ijo);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+  
+    .burger-icon {
+      display: flex;
+      align-items: center;
+      margin-left: 70px;
+    }
+  
+    .burger-menu.active {
+      transition: background-color 0.3s cubic-bezier(0.5, 0, 0.5, 1); /* Tambahkan fungsi waktu transisi cubic-bezier */
+    }
+    .nav {
+      display: none;
+      top: 60px;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+  
+    .nav.active {
+      display: flex;
+      width: 100%; /* Lebar navbar sesuai dengan lebar layar */
+      background-color: white;
+      position: fixed;
+      top: 60px;
+      right: 0px;
+      padding: 20px 0; /* Padding atas dan bawah */
+      z-index: 1;
+      border-radius: 0; /* Menghilangkan border-radius */
+      box-shadow: none; /* Menghilangkan box-shadow */
+      transition: all 0.3s ease;
+    }
+  
+    .burger-menu.active .bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+  
+    .burger-menu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .burger-menu.active .bar:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  
+    .nav li {
+      display: block; /* Mengubah list item menjadi block agar terurut ke bawah */
+      padding: 15px 20px; /* Padding item */
+      text-align: center;
+    }
+  
+    .nav li a {
+      color: var(--bg-ijo);
+    }
+  
+    .nav li a:hover {
+      color: var(--bg-abu);
+    }
+  }
+  
+  /*==user-profile========================*/
+  .profile-pengguna .action {
+    display: block;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .profile-pengguna .action img {
+    width: 70%;
+    height: auto;
+    margin-top: 4px;
+  }
+  
+  .profile-pengguna .pengguna {
+    width: 310px;
+    padding: 30px;
+    background-color: #222533;
+    border-radius: 10px;
+    position: absolute;
+    top: 70px;
+    right: 138px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  
+  .profile-pengguna .pengguna.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .profile-pengguna .pengguna::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #222533;
+    border-top-left-radius: 3px;
+    position: absolute;
+    top: -8px;
+    right: 19px;
+    transform: rotate(45deg);
+  }
+  
+  .profile-pengguna .pengguna .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-pengguna .pengguna .profile img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    user-select: none;
+  }
+  
+  .profile-pengguna .pengguna .profile .info {
+    margin-left: 15px;
+  }
+  
+  .profile-pengguna .pengguna .profile .info h2 {
+    color: #dadada;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+  }
+  
+  .profile-pengguna .pengguna .profile .info p {
+    color: #7d8193;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .profile-pengguna .pengguna .btn-user:hover {
+    background-color: #292c3d;
+  }
+  
+  .profile-pengguna .pengguna ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pengguna .pengguna ul li:last-child {
+    margin: 0;
+  }
+  
+  .profile-pengguna .pengguna ul li a {
+    color: #e5e5e5;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Menambahkan transisi smooth pada warna teks saat hover */
+  }
+  .profile-pengguna .pengguna ul li img {
+    width: 26px;
+    margin-right: 10px;
+    user-select: none;
+  }
+  
+  .profile-pengguna .pengguna ul li a:hover {
+    color: var(--bg-ijomuda); /* Ganti dengan warna teks saat hover */
+  }
+  
+  @media (max-width: 768px) {
+    .profile-pengguna .pengguna {
+      right: 50px; /* Sesuaikan posisi dropdown untuk ukuran layar laptop yang lebih kecil */
+    }
+  }
+  
+  /*==Nav End========================*/
+  /* Responsif pada lebar layar 576px atau kurang */
+  
+  @media (max-width: 320px) {
+    .profile-pengguna .pengguna {
+      right: 58px;
+    }
+  }
+  
+  /* ========== Search =============*/
+  .bg-1 {
+    position: absolute;
+    left: -50px;
+    top: -150px;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+  }
+  .inner-bckg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Tengah secara horizontal */
+    height: 80vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .search-banner-text {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: 11%;
+    position: relative;
+    padding: 0;
+  }
+  .search-banner-text h1 {
+    font-size: 3rem;
+    line-height: 55px;
+    color: var(--bg-hitam);
+  }
+  .search-banner-text strong {
+    color: var(--bg-ijo);
+    font-size: 1.4rem;
+    margin-top: 4px;
+  }
+  .search-box {
+    background-color: #ffffff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0px 5px 0px 20px;
+    border-radius: 30px;
+  }
+  .search-box i {
+    font-size: 1.3rem;
+    color: var(--bg-abu);
+    margin: 0px 10px;
+  }
+  .search-box .search-input {
+    height: 40px;
+    border: none;
+    width: 100%;
+    padding: 0px 10px;
+    outline: none;
+  }
+  .search-box .search-btn {
+    width: 220px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: var(--bg-ijo);
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .search-box .search-btn:hover {
+    background-color: var(--bg-ijomuda);
+    transition: all 0.3s ease 0s;
+  }
+
+  @media (max-width: 768px) {
+    .search-banner-text{
+      width: auto;
+    }
+    .search-banner-text h1{
+      font-size: 2rem;
+    }
+    .search-box {
+      width: auto; /* Sesuaikan posisi dropdown untuk ukuran layar laptop yang lebih kecil */
+    }
+  }
+  
+  
+  /* CSS */
+  .bckg {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+      0deg,
+      rgb(164, 198, 122) 0%,
+      /* Warna bawah (item muda) */ rgb(255, 255, 255) 100%
+        /* Warna atas (putih) */
+    );
+    color: white;
+  }
+  
+  .inner-bckg {
+    height: 85vh;
+    width: 100%;
+  }
+
+  .inner-bckg2 {
+    height: 20vh;
+    width: 100%;
+  }
+  
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+  }
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+  
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+  
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+  
+  /* /* Shrinking for mobile */
+  @media (max-width: 768px) {
+    .waves {
+      height: 40px;
+      min-height: 100px;
+    }
+    .bckg {
+      /* Tetapkan latar belakang untuk memenuhi layar vertikal */
+      width: 100%;
+    }
+    .bg-1 {
+      left: -30px; /* Sesuaikan dengan perubahan yang Anda inginkan */
+      top: -80px; /* Sesuaikan dengan perubahan yang Anda inginkan */
+      width: 200px; /* Sesuaikan dengan perubahan yang Anda inginkan */
+      height: 200px; /* Sesuaikan dengan perubahan yang Anda inginkan */
+    }
+  }
+
+
+/*==Progress bar================================*/
+#cprogress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.cprogress-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center; /* Tengahkan teks horizontal */
+}
+
+.cprogress-heading h2 {
+  font-size: 1.56rem;
+  font-weight: 700;
+  color: #202020;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.progress-card,
+.profile-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: calc(50% - 20px);
+  overflow: hidden;
+}
+
+.container-progress,
+.container-detail-profile {
+  padding: 15px;
+  width: 385px;
+}
+
+.container-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.container-detail-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 55px;
+  margin-top: 55px;
+}
+
+.container-detail-profile h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #202020;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.container-detail-profile button[type="edit-profile"] {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #006A70;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.container-detail-profile button[type="edit-profile"]:hover {
+  background-color: #068b92;
+}
+
+button[type="edit-profile"] a{
+  color: white;
+}
+
+.container-progress{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 385px;
+  padding: 50px 0;
+  border-radius: 8px;
+  background: #fff;
+  row-gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.circular-progress{
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.progress-value{
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: #006A70;
+}
+.text{
+  font-size: large;
+  font-weight: 500;
+  color: var(--bg-ijo);
+}
+.text-input-kalori{
+  font-size: large;
+  font-weight: 500;
+  color: var(--bg-ijo);
+}
+.text-status-kalori{
+  font-size: large;
+  font-weight: bold;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .progress-container {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin: 0 10px;
+  }
+
+  .progress-card,
+  .profile-card {
+    width: 100%; /* Agar card memenuhi lebar layar pada layar kecil */
+  }
+
+  .container-progress,
+  .container-detail-profile {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+
+
+  /*============== Riwayat ================ */
+  .container-riwayat {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: calc(25% - 20px); /* Menggunakan calc untuk menghitung lebar dengan margin yang dihilangkan */
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  height: 3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.image-container {
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.card-date {
+  display: block;
+  color: #888;
+  height: 1.5em;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+.card-title-riwayat {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-title-riwayat h3 {
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 15px;
+}
+
+.card-title-riwayat span {
+    color: #4eb060;
+}
+
+
+
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .container-riwayat {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+
+  
+  /* js related */
+  .showRecipe {
+    display: block;
+  }
+  
+  .meal-details-content {
+    margin: 2rem;
+  }
+  .meal-details-content p:not(.recipe-category) {
+    padding: 1rem 0;
+  }
+  .recipe-close-btn {
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+    font-size: 1.8rem;
+    background: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+  }
+  .recipe-title {
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+  }
+  .recipe-category {
+    background: #fff;
+    font-weight: 600;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+  }
+  .recipe-category {
+    background: #fff;
+    font-weight: 600;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+  }
+  .recipe-instruct {
+    padding: 1rem 0;
+  }
+  .recipe-meal-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  .recipe-link {
+    margin: 1.4rem 0;
+  }
+  .recipe-link a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+  }
+  .recipe-link a:hover {
+    opacity: 0.8;
+  }
+  
+  /*  */
+  .notFound {
+    grid-template-columns: 1fr !important;
+    color: var(--tenne-tawny);
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+  }
+  
+  /* Media Queries */
+  @media screen and (min-width: 600px) {
+    .meal-search-box {
+      width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    #meal {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .meal-item {
+      margin: 0;
+    }
+    .meal-details {
+      width: 700px;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    #meal {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* ============= Footer ========== */
+.show {
+    display: inline;
+  }
+  
+  .hide {
+    display: none;
+  }
+  .logo_diur {
+    width: auto;
+    max-height: 50px;
+  }
+  
+  footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 16px 70px -8px rgb(0, 0, 0, 0.25);
+    transition: background 0.3s linear;
+  }
+  
+  .container {
+    max-width: 1440px;
+    padding: 30px 40px;
+    margin: auto;
+    height: 500;
+  }
+  
+  .content_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .profil .logo_area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .profil .logo_area img {
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .logo_area .logo_name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 1rem;
+    color: var(--secondary-color);
+  }
+  
+  .logo_area button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  .logo_area .sun {
+    color: #fff;
+    font-size: 22px;
+  }
+  
+  .logo_area .moon {
+    color: var(--primary-color);
+    font-size: 22px;
+  }
+  
+  .desc_area {
+    max-width: 320px;
+    margin-bottom: 1.25rem;
+  }
+  
+  .desc_area p {
+    color: #828282;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  
+  .social_media a {
+    color: #828282;
+    margin-right: 22px;
+    font-size: 24px;
+  }
+  
+  .social_media a:hover {
+    color: #313131;
+  }
+  
+  .service_area {
+    display: flex;
+  }
+  
+  .service_header {
+    margin-right: 40px;
+  }
+  
+  li.service_name {
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+  
+  .service_header li a {
+    color: #828282;
+    padding-bottom: 1px;
+    font-weight: 400;
+  }
+  
+  .service_header li a:hover {
+    color: #313131;
+  }
+  
+  .service_header li {
+    margin-bottom: 10px;
+  }
+  
+  hr {
+    height: 1px;
+    border: none;
+    background-color: #828282;
+    margin-bottom: 1rem;
+  }
+  
+  .footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+  }
+  
+  .copy_right {
+    color: #828282;
+    display: flex;
+    align-items: center;
+  }
+  
+  .copy_right span {
+    margin-left: 8px;
+    font-weight: 400;
+    letter-spacing: 0.135rem;
+  }
+  
+  .tou a {
+    color: #828282;
+    margin-left: 1.5rem;
+  }
+  .tou a:hover {
+    color: #313131;
+  }
+  
+  .service_header li {
+    list-style: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .content_footer {
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+    .service_area {
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+    .service_header {
+      margin-left: 0;
+      margin-right: 40px;
+    }
+    .social_media {
+      margin-bottom: 1rem;
+    }
+    .footer_bottom {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  @media screen and(max-width:510px) {
+    .service_header {
+      margin-bottom: 8px;
+    }
+    .copy-right {
+      margin-bottom: 8px;
+    }
+  }
+  /* ========== Footer style end =============*/

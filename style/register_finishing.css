@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    font-family: poppins;
+    scroll-behavior: smooth;
+  }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    max-width: 650px;
+    margin-right: 20px;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 450px;
+    margin-right: 20px;
+}
+
+.form-title {
+    color: #45a049;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+.elipse-up {
+    height: 10%; /* Sesuaikan persentase sesuai kebutuhan */
+    width: auto;
+    max-width: 100%;
+}
+
+.elipse-down {
+    height: 10%; /* Sesuaikan persentase sesuai kebutuhan */
+    width: auto;
+    max-width: 100%;
+}
+
+form {
+    text-align: left;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .form-container, .image-container {
+        margin-right: 0;
+    }
+    .image-container {
+        margin-bottom: 20px;
+    }
+    .elipse-container {
+        left: 50%; /* Menengahkan elipse-container di tengah */
+        transform: translateX(-50%);
+    }
+    .elipse-container-down {
+        left: 50%; /* Menengahkan elipse-container-down di tengah */
+        transform: translateX(-50%);
+    }
+}
+
+
+
+/*-------------MODAL------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px; /* Tambahkan border-radius di sini */
+    padding: 15px; /* Sesuaikan padding sesuai kebutuhan */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 28px; /* Tambahkan font-size di sini */
+    font-weight: bold;
+    color: crimson;
+}
+
+#modalPassword {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0e7c82;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #24a2a9;
+}
+
+#security-key{
+    color: rgb(44, 43, 43);
+}
+
+#submitBtn {
+    background-color: #474646; /* Warna abu-abu */
+    color: #fff; /* Warna teks putih */
+}
+
+#submitBtn:not(.disabled) {
+    background-color: #4CAF50; /* Warna hijau */
+}
+
+#oldPassword {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+#newPassword {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+#confirmNewPassword {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+/*---------Responsive layar besar---------*/
+/* Untuk layar yang lebih kecil atau sama dengan 15 inch */
+@media only screen and (min-width: 1024px) {
+    .container {
+        margin-top: 2rem;
+        align-items: center;
+        flex-direction: row; /* Kembalikan orientasi flex container ke baris */
+        justify-content: center; /* Posisikan elemen secara merata di sepanjang container */
+    }
+
+    .image-container, .form-container {
+        margin: 0 auto;
+        max-width: 45%; /* Atur lebar maksimum untuk elemen-elemen di dalam container */
+    }
+
+    .elipse-container, .elipse-container-down {
+        display: none; /* Sembunyikan elipses pada layar yang lebih besar */
+    }
+}
