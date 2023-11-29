@@ -1,8 +1,8 @@
-# GaneshaWeb
-DIUR Web Project by Ganesha
-Created by : 
+# GaneshaWeb <br>
+DIUR Web Project by Ganesha <br>
+Created by : <br>
 Glorian Hilarius Kiantin Beda <br>
-Fikri Saputra
-Rangga Wasita Ningrat
-Nur Rahma Ditta
-Kanaya Sabilla Azzahra
+Fikri Saputra <br>
+Rangga Wasita Ningrat <br>
+Nur Rahma Ditta <br>
+Kanaya Sabilla Azzahra <br>
