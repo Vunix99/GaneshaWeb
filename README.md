@@ -1,5 +1,5 @@
 # GaneshaWeb <br>
-##DIUR Web Project by Ganesha <br>
+## DIUR Web Project by Ganesha <br>
 Created by : <br>
 Glorian Hilarius Kiantin Beda <br>
 Fikri Saputra <br>
